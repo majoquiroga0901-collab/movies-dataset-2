@@ -1022,7 +1022,7 @@ def sales_page():
         comision = deducible * (porcentaje / 100)
         st.metric("Comisión estimada", f"${comision:,.2f}")
 
-        if st.button("Limpiar formulario"):
+        def limpiar_formulario():
             st.session_state.sale_cliente = ""
             st.session_state.sale_estado = sorted(zonas.keys())[0]
             st.session_state.sale_estado_civil = "Casado / Convive"
@@ -1033,7 +1033,8 @@ def sales_page():
                 clave_hijo = f"sale_hijo_{i}"
                 if clave_hijo in st.session_state:
                     del st.session_state[clave_hijo]
-            st.rerun()
+
+        st.button("Limpiar formulario", on_click=limpiar_formulario)
 
         advisor_name = name or "Tu asesor"
         client_label = cliente or "cliente"
