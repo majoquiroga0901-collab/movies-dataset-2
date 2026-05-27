@@ -541,6 +541,15 @@ if role == "admin":
         "📈 Statistics",
         "📜 Sales History",
         "⚙️ Settings",
+        "🏠 Home",
+        "📞 New Client",
+        "📋 Registered Clients",
+        "🌴 Destinations & Cruises",
+        "📦 Package Qualification",
+        "💰 My Commissions",
+        "📈 My Statistics",
+        "🗓️ Follow-ups",
+        "⚙️ My Profile",
     ]
 else:
     menu_options = [
@@ -1505,6 +1514,24 @@ if role == "admin":
         sales_history_page(is_admin=True)
     elif page == "⚙️ Settings":
         settings_page()
+    elif page == "🏠 Home":
+        advisor_home()
+    elif page == "📞 New Client":
+        new_client_page()
+    elif page == "📋 Registered Clients":
+        registered_clients_page()
+    elif page == "🌴 Destinations & Cruises":
+        destinations_cruises_page()
+    elif page == "📦 Package Qualification":
+        package_qualification_page()
+    elif page == "💰 My Commissions":
+        my_commissions_page()
+    elif page == "📈 My Statistics":
+        my_statistics_page()
+    elif page == "🗓️ Follow-ups":
+        followups_page()
+    elif page == "⚙️ My Profile":
+        my_profile_page()
 else:
     if page == "🏠 Home":
         advisor_home()
