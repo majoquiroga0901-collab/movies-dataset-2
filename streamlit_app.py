@@ -1189,7 +1189,7 @@ def statistics_page():
         st.bar_chart(states)
     if package_clients:
         st.subheader("Clients by package")
-        st.bar_chart(package_clients)
+        st.pie_chart(package_clients)
     if monthly_clients:
         st.subheader("Monthly growth")
         st.line_chart(monthly_clients)
